@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<style>
+    /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container Style */
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 360px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Heading Style */
+.container h2 {
+    margin-bottom: 25px;
+    color: #2575fc;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Input Field Style */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 7px;
+    color: #333;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 8px rgba(37, 117, 252, 0.3);
+    background-color: #fff;
+}
+
+/* Button Style */
+.btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #6a11cb;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: #5a0a9e;
+    transform: scale(1.02);
+}
+
+/* Link Style */
+p {
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+p a {
+    color: #6a11cb;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+p a:hover {
+    color: #5a0a9e;
+}
+
+/* Additional Input Styling */
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <p>Don't have an account? <a href="sign.html">Sign Up</a></p>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Simulate login success
+            alert('Login successful! Redirecting to homepage...');
+            window.location.href = 'index.html';  // Redirect to index page
+        });
+    </script>
+</body>
+</html>
